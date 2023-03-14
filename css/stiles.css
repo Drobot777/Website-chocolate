@@ -1,0 +1,158 @@
+:root {
+  --color-main: #111111;
+  --color-secondary: #1e1823;
+  --color-auxiliary: #fd9222;
+  --coror-bg: #e2e2e2;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+
+  margin: 0;
+}
+ul,
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0;
+  margin: 0;
+}
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+}
+.container {
+  min-width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 375px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+/* --------------------------------HEADERS-------------------------------------------------------- */
+.navigation,
+.social {
+  display: none;
+}
+.wrapper-menu {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 14px;
+}
+.menu-icon {
+  stroke: var(--color-main);
+}
+.btn-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #111111;
+}
+.acent {
+  font-style: italic;
+}
+.cont-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4px;
+}
+.nav-list {
+  display: flex;
+  gap: 24px;
+}
+.nav-link {
+  display: block;
+  font-weight: 500;
+  line-height: 1.14;
+  color: var(--color-main);
+}
+.icon-instagram,
+.icon-twitter {
+  stroke: var(--color-main);
+  fill: #ffffff;
+}
+.social-list {
+  display: flex;
+  gap: 18px;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .menu-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .wrapper-menu {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-left: 188px;
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .btn-menu {
+    display: none;
+  }
+  .logo-link {
+    font-size: 18px;
+    line-height: 1.111;
+  }
+  .wrapper-menu {
+    padding-bottom: 32px;
+  }
+  .logo-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+/* ------------------------------------------------HERO ----------------------------------------------------------------*/
