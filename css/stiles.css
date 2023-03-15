@@ -24,6 +24,11 @@ p {
   padding: 0;
   margin: 0;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .link {
   text-decoration: none;
 }
@@ -168,9 +173,13 @@ p {
   clip-path: inset(50%);
   margin: -1px;
 }
+.hero {
+  padding-bottom: 72px;
+}
 .hero-wrapp {
   padding-top: 395px;
   padding-right: 16px;
+
   padding-left: 20px;
   padding-bottom: 20px;
   border-radius: 30px;
@@ -223,6 +232,7 @@ p {
   color: #ffffff;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .soc-scrol {
   display: flex;
@@ -240,6 +250,7 @@ p {
   font-size: 14px;
   line-height: 1.21;
   color: #ffffff;
+  cursor: pointer;
 }
 .btn-link-section {
   display: inline-block;
@@ -251,13 +262,18 @@ p {
   border-radius: 100px;
   border: 1px solid #ffffff;
   color: #ffffff;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
+  .hero {
+    padding-bottom: 50px;
+  }
   .hero-wrapp {
     padding-top: 671px;
     padding-right: 40px;
     padding-left: 40px;
     padding-bottom: 40px;
+
     border-radius: 30px;
     background-image: linear-gradient(
         180deg,
@@ -302,11 +318,15 @@ p {
   }
 }
 @media screen and (min-width: 1200px) {
+  .hero {
+    padding-bottom: 72px;
+  }
   .hero-wrapp {
     padding-top: 381px;
     padding-right: 40px;
     padding-left: 40px;
     padding-bottom: 40px;
+
     border-radius: 30px;
     background-image: linear-gradient(
         180deg,
@@ -329,6 +349,273 @@ p {
           rgba(17, 17, 17, 0.4) 100%
         ),
         url("../images/hero-bg-desktop-2x.jpg");
+    }
+  }
+}
+/* ----------------------------------ADVANTAGES---------------------------------------- */
+.advantages {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: var(--color-secondary);
+}
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.advantages-wrrap-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 365px;
+}
+.advantages-title {
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+.advantages-text {
+  max-width: 308px;
+  line-height: 1.21;
+  color: rgba(255, 255, 255, 0.7);
+}
+@media screen and (min-width: 768px) {
+  .advantages {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .advantages-list {
+    gap: 32px;
+  }
+  .advantages-item {
+    padding-top: 9px;
+    padding-right: 28px;
+    padding-bottom: 9px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages-item {
+    padding-right: 18px;
+  }
+  .advantages-list {
+    gap: 70px;
+    margin-left: 18px;
+  }
+}
+/* --------------------TASTE SENSATION --------------------------------------*/
+.taste-sensation {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.taste-title {
+  max-width: 283px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+.span-taste {
+  color: var(--color-auxiliary);
+}
+.taste-text {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.taste-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.sp-text {
+  position: absolute;
+  left: 28px;
+  bottom: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.taste-item {
+  position: relative;
+  min-width: 335px;
+  min-height: 270px;
+  border: 1px solid #111111;
+}
+.taste-item:nth-child(2n) .sp-text {
+  color: var(--color-main);
+}
+.taste-item:nth-child(2n) {
+  border: 1px solid var(--color-auxiliary);
+  border-radius: 15px;
+}
+.chocolate {
+  background-image: url("../images/milk-chocolate.png");
+  background-repeat: no-repeat;
+  background-size: 224px 171px;
+  background-position: 56px 28px;
+  border-radius: 15px;
+  background-color: var(--color-auxiliary);
+  border: none;
+}
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .chocolate {
+    background-image: url("../images/milk-chocolate-2x.png");
+  }
+}
+.milk {
+  background-image: url("../images/milk-1x.png");
+  background-repeat: no-repeat;
+  background-size: 224px 171px;
+  background-position: 56px 28px;
+}
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .milk {
+    background-image: url("../images/milk-2x.png");
+  }
+}
+.nuts {
+  background-image: url("../images/nuts-1x.png");
+  background-repeat: no-repeat;
+  background-size: 224px 171px;
+  background-position: 56px 28px;
+  border-radius: 15px;
+  background-color: var(--color-secondary);
+  border: none;
+}
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .nuts {
+    background-image: url("../images/nuts-2x.png");
+  }
+}
+.semi-sweet {
+  background-image: url("../images/semi-1x.png");
+  background-repeat: no-repeat;
+  background-size: 224px 171px;
+  background-position: 56px 28px;
+}
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .semi-sweet {
+    background-image: url("../images/semi-2x.png");
+  }
+}
+@media screen and (min-width: 768px) {
+  .taste-sensation {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .taste-title {
+    max-width: 411px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 28px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: -0.03em;
+  }
+  .taste-text {
+    max-width: 486px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .taste-item {
+    min-width: 336px;
+  }
+  .taste-list {
+    gap: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .taste-sensation {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+  .taste-item {
+    min-width: 270px;
+  }
+  .taste-list {
+    flex-wrap: nowrap;
+    gap: 19px;
+  }
+  .chocolate {
+    background-image: url("../images/milk-chocjlate-desk1x.png");
+    background-repeat: no-repeat;
+    background-size: 206px 160px;
+    background-position: 28px 28px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .chocolate {
+      background-image: url("../images/milk-chocolate-desk2x.png");
+    }
+  }
+  .milk {
+    background-image: url("../images/milk-desk1x.png");
+    background-repeat: no-repeat;
+    background-size: 206px 160px;
+    background-position: 28px 28px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .milk {
+      background-image: url("../images/milk-desk2x.png");
+    }
+  }
+  .nuts {
+    background-image: url("../images/nuts-desk-1x.png");
+    background-repeat: no-repeat;
+    background-size: 206px 160px;
+    background-position: 28px 28px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .nuts {
+      background-image: url("../images/nuts-desk-2x.png");
+    }
+  }
+  .semi-sweet {
+    background-image: url("../images/semi-desk-1x.png");
+    background-repeat: no-repeat;
+    background-size: 206px 160px;
+    background-position: 28px 28px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .semi-sweet {
+      background-image: url("../images/semi-desk-2x.png");
     }
   }
 }
