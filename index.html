@@ -84,7 +84,9 @@
               moment of pure delight!
             </h2>
             <div class="btn-wrapp">
-              <button type="button" class="btn-modal">Buy now</button>
+              <button type="button" class="btn-modal" data-modal-open>
+                Buy now
+              </button>
               <a href="" class="btn-link-section"> How it’s made </a>
               <a href="" class="btn-link-foot">
                 scroll down
@@ -197,9 +199,9 @@
           </div>
         </div>
       </section>
-      <div class="backdrop-hero">
+      <div class="backdrop-hero is-hidden" data-modal>
         <div class="modal-hero">
-          <button type="button" class="modal-hero-btn-close">
+          <button type="button" class="modal-hero-btn-close" data-modal-close>
             <svg class="icon-hero-close" width="24" height="24">
               <use href="./images/symbol-defs.svg#icon-x-close"></use>
             </svg>
@@ -245,41 +247,79 @@
               </li>
             </ui>
           </div>
-          <form>
-            <label>
-              Personal information
-              <input type="text" name="name" placeholder="Name" />
-              <input type="text" name="surname" placeholder="Surname" />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" placeholder="Enter your email" />
-            </label>
-            <label>
-              Phone number
-              <input type="tel" name="phone" placeholder="Phone number" />
-            </label>
-            <label>
-              Card number
+          <form class="hero-form">
+            <label class="hero-label">
+              <span class="sp-label"> Personal information</span>
+
               <input
-                type="number"
-                name="card number"
-                placeholder="Enter card"
+                type="text"
+                name="name"
+                placeholder="Name"
+                class="input-hero one"
+              />
+              <input
+                type="text"
+                name="surname"
+                placeholder="Surname"
+                class="input-hero"
               />
             </label>
-            <label>
-              Comment
+            <label class="hero-label">
+              <span class="sp-label"> Email</span>
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                class="input-hero"
+              />
+            </label>
+            <label class="hero-label">
+              <span class="sp-label">Phone number</span>
+              <span class="container-span-phone">
+                <span class="wrrap-icon-phone">
+                  <svg class="icon-ukr" width="24" height="24">
+                    <use href="./images/symbol-defs.svg#icon-LeftIcon"></use>
+                  </svg>
+                  <span class="namber-hero">+380</span>
+                </span>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone number"
+                  class="input-hero phone"
+              /></span>
+            </label>
+            <label class="hero-label">
+              <span class="sp-label"> Card number</span>
+              <span class="container-span-card">
+                <svg class="icon-card" width="32" height="21">
+                  <use href="./images/symbol-defs.svg#icon-Mastercard"></use>
+                </svg>
+                <input
+                  type="number"
+                  name="card number"
+                  placeholder="Enter card"
+                  class="input-hero"
+                />
+              </span>
+            </label>
+            <label class="hero-label">
+              <span class="sp-label"> Comment</span>
+
               <textarea
                 name="comment"
                 cols="30"
                 rows="10"
                 placeholder="Enter text"
+                class="hero-textarea"
               ></textarea>
             </label>
-            <button type="submit">Submit</button>
+            <button type="submit" class="btn-submit-hero">Submit</button>
           </form>
         </div>
       </div>
     </main>
+    <script src="./css/js/modal-hero.js"></script>
   </body>
 </html>

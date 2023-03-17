@@ -237,10 +237,18 @@ a {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  transition: color 250ms linear;
 }
 .soc-scrol {
   display: flex;
   margin-left: 12px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: background 250ms linear;
+}
+.icon-scrol {
+  fill: var(--color-auxiliary);
+  transition: fill 250ms linear;
 }
 .btn-modal {
   display: inline-block;
@@ -255,6 +263,7 @@ a {
   line-height: 1.21;
   color: #ffffff;
   cursor: pointer;
+  transition: color 250ms linear, background 250ms linear;
 }
 .btn-link-section {
   display: inline-block;
@@ -267,6 +276,24 @@ a {
   border: 1px solid #ffffff;
   color: #ffffff;
   cursor: pointer;
+  transition: color 250ms linear, border 250ms linear;
+}
+.btn-modal:is(:hover, :focus) {
+  background: #fcf1e0;
+  color: var(--color-auxiliary);
+}
+.btn-link-section:is(:hover, :focus) {
+  border-color: var(--color-auxiliary);
+  color: var(--color-auxiliary);
+}
+.btn-link-foot:is(:hover, :focus) {
+  color: var(--color-auxiliary);
+}
+.btn-link-foot:is(:hover, :focus) .icon-scrol {
+  fill: #ffffff;
+}
+.btn-link-foot:is(:hover, :focus) .soc-scrol {
+  background-color: var(--color-auxiliary);
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -660,8 +687,26 @@ a {
   background-repeat: no-repeat;
 }
 /* -----------------------MODAL --------------------------------*/
+.backdrop-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms linear;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 .icon-hero-close {
   stroke: #111111;
+  transition: stroke 250ms linear;
+}
+.modal-hero-btn-close:is(:hover, :focus) .icon-hero-close {
+  stroke: var(--color-auxiliary);
 }
 .modal-list {
   display: flex;
@@ -669,8 +714,10 @@ a {
   gap: 40px;
 }
 .modal-hero {
-  position: relative;
-  max-width: 335px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  max-width: 311px;
   min-height: 100%;
   padding: 32px 24px;
   margin-left: auto;
@@ -678,6 +725,7 @@ a {
   background-color: #fafafa;
   border-radius: 15px;
   border: 1px solid red;
+  transform: translateX(-50%);
 }
 .modal-hero-btn-close {
   position: absolute;
@@ -690,6 +738,10 @@ a {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: background 250ms linear;
+}
+.modal-hero-btn-close:is(:hover, :focus) {
+  background-color: #fcf1e0;
 }
 .modal-hero-title {
   margin-bottom: 32px;
@@ -711,6 +763,7 @@ a {
   margin-right: auto;
   overflow-x: auto;
 }
+
 .modal-item {
   text-align: center;
   min-width: 231px;
@@ -731,4 +784,98 @@ a {
   background-color: #fafafa;
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 100px;
+}
+/*--------------------- FORM ---------------------------*/
+.hero-form {
+  display: flex;
+  flex-direction: column;
+}
+.sp-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  color: #000000;
+}
+.input-hero {
+  width: 100%;
+  height: 45px;
+  margin: 0;
+  padding: 14px 18px;
+  background-color: #fafafa;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  filter: drop-shadow(0px 5.44492px 5.44492px rgba(0, 0, 0, 0.03));
+  border-radius: 8px;
+}
+.input-hero::placeholder {
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+}
+.hero-label {
+  margin-bottom: 18px;
+}
+.one {
+  margin-bottom: 14px;
+}
+.container-span-card {
+  position: relative;
+}
+.icon-card {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.phone {
+  padding: 10px 29px 11px 106px;
+}
+.wrrap-icon-phone {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  width: 74px;
+  border-right: 1.5px solid rgba(17, 17, 17, 0.05);
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.container-span-phone {
+  position: relative;
+}
+.namber-hero {
+  margin-left: 8px;
+}
+.hero-textarea {
+  width: 100%;
+  height: 91px;
+  padding: 14px 18px;
+  resize: none;
+  background-color: #fafafa;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  filter: drop-shadow(0px 5.44492px 5.44492px rgba(0, 0, 0, 0.03));
+  border-radius: 8px;
+}
+.btn-submit-hero {
+  display: block;
+  max-width: 109px;
+  padding: 12px 28px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  border: none;
+  background-color: var(--color-auxiliary);
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: color 250ms linear, background 250ms linear;
+}
+.btn-submit-hero:is(:hover, :focus) {
+  color: var(--color-auxiliary);
+  background-color: #fcf1e0;
 }
