@@ -210,60 +210,93 @@
           <div class="hero-modal-wrrap">
             <ui class="modal-list list">
               <li class="modal-item">
-                <img
-                  srcset="
-                    ./images/kisspng-1x.png 1x,
-                    ./images/kisspng-2x.png 2x
-                  "
-                  src="./images/kisspng-1x.png"
-                  alt="chocolate chips"
-                  width="167"
-                  height="148"
-                /><button type="button" class="btn-weight">100 g</button>
+                <picture>
+                  <source
+                    srcset="
+                      ./images/choco-plits-1.png 1x,
+                      ./images/choco-cips2x.png  2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/kisspng-1x.png 1x,
+                      ./images/kisspng-2x.png 2x
+                    "
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="./images/kisspng-1x.png"
+                    alt="chocolate chips"
+                    width="167"
+                    height="148"
+                  />
+                </picture>
+                <button type="button" class="btn-weight">100 g</button>
               </li>
               <li class="modal-item">
-                <img
-                  srcset="
-                    ./images/kisspng-tabl-1x.png 1x,
-                    ./images/kisspng-tabl-2x.png 2x
-                  "
-                  src="./images/kisspng-tabl-1x.png"
-                  alt="chocolate-nuts"
-                  width="167"
-                  height="148"
-                /><button type="button" class="btn-weight">200 g</button>
+                <picture>
+                  <source
+                    srcset="./images/c-1.png 1x, ./images/c-2.png 2x"
+                    media="(min-width:768px)" />
+                  <source
+                    srcset="
+                      ./images/kisspng-tabl-1x.png 1x,
+                      ./images/kisspng-tabl-2x.png 2x
+                    "
+                    media="(max-width:767px)" />
+                  <img
+                    src="./images/kisspng-tabl-1x.png"
+                    alt="chocolate-nuts"
+                    width="167"
+                    height="148"
+                /></picture>
+                <button type="button" class="btn-weight">200 g</button>
               </li>
               <li class="modal-item">
-                <img
-                  srcset="
-                    ./images/transparent-desk-1x.png 1x,
-                    ./images/transparent-desk-2x.png 2x
-                  "
-                  src="./images/transparent-desk-1x.png"
-                  alt="chocolate-tiles"
-                  width="167"
-                  height="148"
-                /><button type="button" class="btn-weight">300 g</button>
+                <picture>
+                  <source
+                    srcset="
+                      ./images/choco-plits-1.png 1x,
+                      ./images/choco-plits-2.png 2x
+                    "
+                    media="(min-width:768px)" />
+                  <source
+                    srcset="
+                      ./images/transparent-desk-1x.png 1x,
+                      ./images/transparent-desk-2x.png 2x
+                    "
+                    media="(max-width:767px)" />
+                  <img
+                    src="./images/transparent-desk-1x.png"
+                    alt="chocolate-tiles"
+                    width="167"
+                    height="148"
+                /></picture>
+                <button type="button" class="btn-weight">300 g</button>
               </li>
             </ui>
           </div>
           <form class="hero-form">
-            <label class="hero-label">
-              <span class="sp-label"> Personal information</span>
+            <div class="input-wrrap">
+              <label class="hero-label too">
+                <span class="sp-label"> Personal information</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  class="input-hero one go"
+                />
+              </label>
+              <label class="hero-label">
+                <input
+                  type="text"
+                  name="surname"
+                  placeholder="Surname"
+                  class="input-hero one"
+              /></label>
+            </div>
 
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                class="input-hero one"
-              />
-              <input
-                type="text"
-                name="surname"
-                placeholder="Surname"
-                class="input-hero"
-              />
-            </label>
             <label class="hero-label">
               <span class="sp-label"> Email</span>
 
