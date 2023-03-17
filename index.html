@@ -85,17 +85,15 @@
             </h2>
             <div class="btn-wrapp">
               <button type="button" class="btn-modal">Buy now</button>
-              <button type="button" class="btn-link-section">
-                How it’s made
-              </button>
-              <button type="button" class="btn-link-foot">
+              <a href="" class="btn-link-section"> How it’s made </a>
+              <a href="" class="btn-link-foot">
                 scroll down
                 <span class="soc-scrol">
                   <svg class="icon-scrol" width="28" height="28">
                     <use href="./images/symbol-defs.svg#icon-2"></use>
                   </svg>
                 </span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -184,6 +182,104 @@
           </ul>
         </div>
       </section>
+      <section class="how-it-made">
+        <div class="container">
+          <h2 class="how-title">hOW IT’S made?</h2>
+          <div class="how-wrrap">
+            <video
+              src="https://youtu.be/fZGwpvGXDDo"
+              poster="./images/video-bg-mobile-1x.jpg"
+              width="335"
+              height="500"
+              controls
+              autoplay
+            ></video>
+          </div>
+        </div>
+      </section>
+      <div class="backdrop-hero">
+        <div class="modal-hero">
+          <button type="button" class="modal-hero-btn-close">
+            <svg class="icon-hero-close" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-x-close"></use>
+            </svg>
+          </button>
+          <h2 class="modal-hero-title"><span class="sp-hero">bUY</span> nOW</h2>
+          <div class="hero-modal-wrrap">
+            <ui class="modal-list list">
+              <li class="modal-item">
+                <img
+                  srcset="
+                    ./images/kisspng-1x.png 1x,
+                    ./images/kisspng-2x.png 2x
+                  "
+                  src="./images/kisspng-1x.png"
+                  alt="chocolate chips"
+                  width="167"
+                  height="148"
+                /><button type="button" class="btn-weight">100 g</button>
+              </li>
+              <li class="modal-item">
+                <img
+                  srcset="
+                    ./images/kisspng-tabl-1x.png 1x,
+                    ./images/kisspng-tabl-2x.png 2x
+                  "
+                  src="./images/kisspng-tabl-1x.png"
+                  alt="chocolate-nuts"
+                  width="167"
+                  height="148"
+                /><button type="button" class="btn-weight">200 g</button>
+              </li>
+              <li class="modal-item">
+                <img
+                  srcset="
+                    ./images/transparent-desk-1x.png 1x,
+                    ./images/transparent-desk-2x.png 2x
+                  "
+                  src="./images/transparent-desk-1x.png"
+                  alt="chocolate-tiles"
+                  width="167"
+                  height="148"
+                /><button type="button" class="btn-weight">300 g</button>
+              </li>
+            </ui>
+          </div>
+          <form>
+            <label>
+              Personal information
+              <input type="text" name="name" placeholder="Name" />
+              <input type="text" name="surname" placeholder="Surname" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="Enter your email" />
+            </label>
+            <label>
+              Phone number
+              <input type="tel" name="phone" placeholder="Phone number" />
+            </label>
+            <label>
+              Card number
+              <input
+                type="number"
+                name="card number"
+                placeholder="Enter card"
+              />
+            </label>
+            <label>
+              Comment
+              <textarea
+                name="comment"
+                cols="30"
+                rows="10"
+                placeholder="Enter text"
+              ></textarea>
+            </label>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
     </main>
   </body>
 </html>

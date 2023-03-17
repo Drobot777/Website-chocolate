@@ -29,6 +29,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+a {
+  text-decoration: none;
+  display: inline-block;
+}
 .link {
   text-decoration: none;
 }
@@ -647,4 +651,84 @@ img {
       background-image: url("../images/semi-desk-2x.png");
     }
   }
+}
+/*----------------------------- HOW IT'S MADE ----------------------------------------*/
+.how-wrrap {
+  min-width: 335px;
+  height: 500px;
+  background-image: url("../images/video-bg-mobile-1x.jpg");
+  background-repeat: no-repeat;
+}
+/* -----------------------MODAL --------------------------------*/
+.icon-hero-close {
+  stroke: #111111;
+}
+.modal-list {
+  display: flex;
+
+  gap: 40px;
+}
+.modal-hero {
+  position: relative;
+  max-width: 335px;
+  min-height: 100%;
+  padding: 32px 24px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fafafa;
+  border-radius: 15px;
+  border: 1px solid red;
+}
+.modal-hero-btn-close {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.modal-hero-title {
+  margin-bottom: 32px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.sp-hero {
+  color: var(--color-auxiliary);
+}
+.hero-modal-wrrap {
+  max-width: 231px;
+  min-height: 284px;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+}
+.modal-item {
+  text-align: center;
+  min-width: 231px;
+  min-height: 257px;
+  /* margin-left: 30px;
+  margin-right: 30px; */
+  padding: 32px 32px 28px 32px;
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+}
+.btn-weight {
+  padding: 8px 29px;
+  margin-top: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  background-color: #fafafa;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 100px;
 }
