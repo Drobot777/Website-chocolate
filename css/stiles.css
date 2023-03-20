@@ -12,6 +12,7 @@ body {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  background-color: #fafafa;
 
   margin: 0;
 }
@@ -113,6 +114,7 @@ a {
 .icon-twitter {
   stroke: var(--color-main);
   fill: #ffffff;
+  transition: stroke 250ms linear;
 }
 .social-list {
   display: flex;
@@ -162,6 +164,13 @@ a {
   .logo-icon {
     width: 24px;
     height: 24px;
+  }
+  .icon-instagram:is(:hover, :focus) {
+    stroke: var(--color-auxiliary);
+  }
+
+  .icon-twitter:is(:hover, :focus) {
+    stroke: var(--color-auxiliary);
   }
 }
 /* ------------------------------------------------HERO ----------------------------------------------------------------*/
@@ -344,6 +353,10 @@ a {
   .btn-link-foot {
     margin-left: auto;
   }
+  .icon-scrol {
+    width: 38px;
+    height: 38px;
+  }
   .soc-scrol {
     margin-left: 14px;
   }
@@ -506,6 +519,7 @@ a {
 .taste-item:nth-child(2n) {
   border: 1px solid var(--color-auxiliary);
   border-radius: 15px;
+  background-color: #ffffff;
 }
 .chocolate {
   background-image: url("../images/milk-chocolate.png");
@@ -680,12 +694,149 @@ a {
   }
 }
 /*----------------------------- HOW IT'S MADE ----------------------------------------*/
+.how-it-made {
+  margin-bottom: 72px;
+}
 .how-wrrap {
-  min-width: 335px;
+  position: relative;
+  max-width: 100%;
   height: 500px;
+  border-radius: 15px;
   background-image: url("../images/video-bg-mobile-1x.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .how-wrrap {
+    background-image: url("../images/video-bg-mobile-2x.jpg");
+  }
+}
+.how-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.cont-icon-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  transform: translate(-50%, -50%);
+}
+.icon-play {
+  margin-left: 13px;
+}
+.block-howmade {
+  padding: 20px 14px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.block-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  margin-bottom: 20px;
+}
+.block-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.block-item {
+  position: relative;
+  padding-left: 16px;
+}
+.sp-period {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 0px;
+  top: 5px;
+  border-radius: 50%;
+  background: #4c4c4c;
+  border: 1px solid #eceded;
+}
+@media screen and (min-width: 768px) {
+  .how-wrrap {
+    height: 776px;
+    background-image: url("../images/video-bg-table-1x.jpg");
+  }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .how-wrrap {
+      background-image: url("../images/video-bg-table-2x.jpg");
+    }
+  }
+  .how-title {
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+  .block-howmade {
+    padding: 32px;
+  }
+  .block-title {
+    max-width: 335px;
+    margin-bottom: 28px;
+  }
+  .block-item {
+    max-width: 480px;
+  }
+  .how-it-made {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrrap-howmade {
+    display: flex;
+    gap: 20px;
+  }
+  .how-wrrap {
+    min-width: 600px;
+    height: 400px;
+    background-image: url("../images/video-bg-desk-1x.jpg");
+  }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .how-wrrap {
+      background-image: url("../images/video-desk-2x.jpg");
+    }
+  }
+  .block-howmade {
+    padding: 32px 32px 94px 32px;
+    min-width: 516px;
+    max-height: 400px;
+    margin-top: 0;
+  }
+  .block-title {
+    margin-bottom: 20px;
+  }
+  .block-list {
+    gap: 24px;
+  }
+  .block-item {
+    max-width: 425px;
+  }
+}
+
 /* -----------------------MODAL --------------------------------*/
 .backdrop-hero {
   position: fixed;
@@ -852,6 +1003,7 @@ a {
   filter: drop-shadow(0px 5.44492px 5.44492px rgba(0, 0, 0, 0.03));
   border-radius: 8px;
 }
+
 .input-hero::placeholder {
   font-size: 14px;
   line-height: 1.21;
